@@ -3,7 +3,8 @@ body {
 }
 h1	{
 	font-family: helvetica;
-	color: white;
+	color: pink;
+	font-size: 250px;
 }
 #container {
 	text-align: center;
