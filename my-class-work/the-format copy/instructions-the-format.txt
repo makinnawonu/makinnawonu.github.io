@@ -1,0 +1,12 @@
+FORMAT THE FORMAT
+
+Instructions: 
+
+While our tribute page for The Format looks amaaazing in the browser, the accompanying code in index.html and style.css is messy as HECK! Please help fix the following: 
+
+- indentation (making sure to be consistent in using either tabs or spaces)
+- line breaks (at the right spots, without extra empty lines)
+- spacing (color:red; vs color: red)
+- capitalization (H1 vs h1, etc)
+
+BONUS: We have some some inline CSS in index.html. That's (usually) not the best, so let's move it next its stylish friends in style.css.
