@@ -1,0 +1,41 @@
+body {
+	background-image: url("../images/background.jpg")
+}
+
+#whole-design {
+	margin: 0 auto;
+	width: 800px;
+
+}
+
+#cards-container {
+	background-color: white;
+}
+
+h3 {
+	margin-left: 15px;
+}
+
+p {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+section {
+	margin: 0 auto;
+	padding: 10px 5px 10px 5px;
+}
+
+div.image-center {
+	/*width: 216px;*/
+	/*margin: auto;*/
+	text-align: center;
+}
+
+img {
+	background: transparent;
+
+}
+a {
+	color: pink;
+}
