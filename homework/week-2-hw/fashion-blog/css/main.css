@@ -1,0 +1,35 @@
+.container {
+	width: 720px;
+	line-height: 1.5;
+	margin-left: 20px;
+	font-family: 'Lato';
+}
+
+.image-center {
+	max-width: 720px;
+	height: auto;
+}
+
+li {
+	display: inline;
+	list-style-type: none;
+	padding: 10px;
+	margin-left: -8px;
+}
+
+.top-nav {
+	;
+}
+
+ul {
+	padding: 0;
+
+}
+
+.continues-link {
+	text-align: right;
+}
+
+.date {
+	font-size: 30px;
+}
