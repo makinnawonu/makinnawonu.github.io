@@ -5,6 +5,16 @@
 	font-family: 'Lato';
 }
 
+h1 {
+	font-size: 55px;
+	font-weight: lighter;
+	color: #DD0000;
+}
+h2 {
+	font-weight: lighter;
+	font-size: 28px;
+}
+
 .image-center {
 	max-width: 720px;
 	height: auto;
@@ -15,6 +25,8 @@ li {
 	list-style-type: none;
 	padding: 10px;
 	margin-left: -8px;
+	font-size: 22px;
+	font-style: lighter;
 }
 
 .top-nav {
@@ -28,8 +40,49 @@ ul {
 
 .continues-link {
 	text-align: right;
+	font-weight: bold;
 }
 
 .date {
-	font-size: 30px;
+	font-size: 34px;
+	color: #cccccc;
+}
+
+.blog-title {
+	font-size: 34px;
+}
+
+.bottom-nav {
+	color: #cccccc
+}
+
+a {
+	color:#DD0000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #aa0000;
+}
+
+.top-nav a {
+	color: #dddddd;
+	text-decoration: underline;
+}
+
+.top-nav a:hover {
+	color: black;
+}
+
+p {
+	font-size: 18px;
+}
+
+.border {
+	color: 1px solid #cccccc;
+}
+
+.copyright {
+	color: #cccccc;
+	font-size: 18px;
 }
