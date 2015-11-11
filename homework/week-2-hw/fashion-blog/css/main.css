@@ -9,10 +9,13 @@ h1 {
 	font-size: 55px;
 	font-weight: lighter;
 	color: #DD0000;
+	margin-bottom: 0px;
 }
 h2 {
 	font-weight: lighter;
 	font-size: 28px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .image-center {
@@ -46,10 +49,13 @@ ul {
 .date {
 	font-size: 34px;
 	color: #cccccc;
+	margin-bottom: 0px;
 }
 
 .blog-title {
 	font-size: 34px;
+	margin-top: 0px;
+	margin-bottom: 10px;
 }
 
 .bottom-nav {
