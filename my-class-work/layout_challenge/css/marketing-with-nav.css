@@ -1,0 +1,72 @@
+.container {
+	margin: 0 auto; /*that plus width will center the container */
+	width: 1200px;
+}
+
+header {
+	/*background-color: pink;*/
+	height: 100px;
+}
+
+.logo {
+	height: 80px;
+	width: 200px;
+	background-color: red;
+	float: left;
+	margin-top: 10px;
+}
+
+nav {
+	float: right;
+	/*background-color: purple;*/
+	margin-top: 30px; /*use this instead of padding */
+	margin-bottom: 30px;
+}
+
+nav a {
+	/* because anchor tags are inline elements, you need to make them block elements to lay them out next to each other */
+	display: inline-block;
+	height: 40px;
+	width: 200px;
+	background-color: blue;
+}
+
+.clear {
+	clear: both;
+}
+
+main {
+	background-color: green;
+	height: 100px;
+	width: 1200px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+article {
+	background-color: orange;
+	height: 150px;
+	width: 380px;
+	float: left;
+}
+
+#left {
+	margin-right: 30px;
+}
+
+#right {
+	margin-left: 30px;
+}
+
+footer {
+	background-color: purple;
+	height: 100px;
+	margin-top: 25px;
+}
+
+
+
+
+
+
+
