@@ -1,4 +1,8 @@
+
+/*great job with this css! one thing to think about is how to have this page layout work without it being confined to a particular width. looks like you have some cruft left over from your work which would be ok to clean out!*/
+
 body {
+	/*don't forget semicolon at end of line!*/
 	font-family:'Sans Source Pro'
 }
 
@@ -36,6 +40,7 @@ a {
 	text-decoration: none;
 }
 
+/*good use of floats!*/
 nav {
 	float: right;
 }
@@ -83,12 +88,14 @@ nav a {
 
 div  #promo-image {
 	background: url("../images/coworking.jpg") no-repeat center center fixed; 
+	/*probably don't need to worry about browser compatibility for background cover today.  judgement call though.*/
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
 	height: 400px;
 }
 
+/*good use semantic html*/
 aside {
 	float: right;
 	font-family: "Source Sans Pro", serif;
@@ -142,12 +149,14 @@ aside div {
    font-size: 19px;
    font-family: 'Oswald', Helvetica, Arial, Sans-Serif;
    text-decoration: none;
+   /* verticle-align middle only works with table elements or display table/table-cell etc*/
    vertical-align: middle;
 }
 .main-CTA:hover {
    border-top-color: #78286f;
    background: #78286f;
    color: #ccc;
+   /*indentation inconsistency closing brackets*/
    }
 .main-CTA:active {
    border-top-color: #78286f;
@@ -165,6 +174,7 @@ article {
 }
 
 article p, article button {
+	/*combine these two lines possibly to "margin: 0 20px";*/
 	margin-left: 20px;
 	margin-right: 20px;
 }
