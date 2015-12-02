@@ -88,4 +88,7 @@ $(document).ready(function () {
 	}
 
 
+//you should try to refactor this using the concept of "this"
+
+
 })
