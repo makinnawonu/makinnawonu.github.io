@@ -89,6 +89,7 @@ $(document).ready(function () {
 
 
 //you should try to refactor this using the concept of "this"
+//you could definitely make this code more efficient by using anonymous functions
 
 
 })
