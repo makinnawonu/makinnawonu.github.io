@@ -1,0 +1,61 @@
+/*#container {
+	width: 1280px;
+	height: 1200px;
+}*/
+
+header {
+	height: 200px;
+	background-color: black;
+	width: 900px;
+	float: left;
+}
+
+.logo {
+	background-color: blue;
+	height: 100px;
+	width: 200px;
+	float: left;
+	color: white;
+	font-family: helvetica;
+}
+
+nav {
+	float: right;
+	margin-top: 30px;
+}
+
+nav a {
+	display: inline-block;
+	background-color: purple;
+	height: 50px;
+	width: 120px;
+}
+
+.clear {
+	clear: both;
+}
+
+.facts {
+	/*display: inline-block;*/
+	float: right;
+	height: 400px;
+	width: 300px;
+	background-color: pink;
+	color: white;
+}
+
+.chances {
+	float: right;
+	height: 400px;
+	width: 300px;
+	background-color: red;
+	color: white;
+
+}
+
+.infobox {
+	float: left;
+	height: 100px;
+	width: 400px;
+	background-color: green;
+}
