@@ -1,0 +1,129 @@
+#container {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.copyright-logo {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 {
+	font-size: 100px;
+	text-align: center;
+	overflow: none;
+}
+
+.value-prop {
+	font-size: 20px;
+	height: 50px;
+	text-align: center;
+	
+}
+
+.clear {
+	clear: both;
+}
+
+button {
+	text-align: center;
+}
+
+.adventure-button {
+	background-color:#e4685d;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	border-radius:25px;
+	border:1px solid #ffffff;
+	display:block;
+	width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:20px 43px;
+	text-decoration:none;
+	text-shadow:0px 2px 0px #b23e35;
+}
+.adventure-botton:hover {
+	background-color:#eb675e;
+}
+.adventure-button:active {
+	position:relative;
+	top:1px;
+}
+
+.adventure-gif {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#category-image {
+	background-image: url(images/others/theater-test.png);
+	width: 33%;
+	height: 200px;
+	background-color: black;
+	float: left;
+}
+
+.event {
+	font-size: 40px;
+}
+
+#movies
+
+#theater
+
+#for-children
+
+#art-museums
+
+#art-public-art
+
+#art-out-of-town
+
+#theater-off-broadway
+
+#theater-broadway
+
+#spare-times-museums
+
+#spare-times-walking-tours
+
+#pop
+
+#jazz
+
+#comedy
+
+#dance
+
+#classical-music
+
+#classical-opera
+
+#web-description p {
+	height: 200px;
+	width: 75%;
+	float: right;
+
+}
+
+section p {
+	color: blue;
+	font-size: 25px;
+}
+
+li {
+	float: left;
+	width: 50%;
+	font-size: 25px;
+}
+
+
+
+

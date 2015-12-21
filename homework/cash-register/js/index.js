@@ -14,7 +14,7 @@
 
 $(document).ready(function () {
 
-	var total = 0
+	var total = 0 //this MUST be defined outside of teh function otherwise the total will be reset to zero EVERY TIME THE FUNCTION RUNS
 
 $('#entry').submit(function (event) {
 	//need to use the id of the actual form or form selector

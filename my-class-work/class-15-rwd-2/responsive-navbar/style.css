@@ -1,0 +1,67 @@
+.container {
+	margin: 0 auto;
+	width: 85%;
+	overflow: hidden; /*moved this here from the header group to make sure hamburger shows up in right place*/
+}
+
+header {
+	background-color: black;
+	text-transform: uppercase;
+	padding: 10px 0;
+}
+
+header h1 {
+	font-size: 35px;
+	float: left;
+	color: white;
+}
+
+header nav {
+	float: right;
+	margin-top: 8px;
+}
+
+header nav a {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	margin-left: 50px;
+}
+
+#small-nav {
+	display: none; /*this ensures the small nav doesn't show up on a big screen*/
+}
+
+#small-nav a {
+	display: block; /*we're doing this because we want to target just the small nav and want to make sure that you can style those as a stacked group of menu items*/
+	background-color: rgb(222,222,222);
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 20px;
+	padding: 5px 0;
+	text-decoration: none;
+	color: black;
+}
+
+
+#icon {
+	display: none;
+	/*float: right; /*if the icon id is in the same div as the rest of the navigation, you don't need to float this*/
+}
+
+@media screen and (max-width: 900px) {
+	header nav a { /*this should be as specific as it is higher up where you're putting rules for the nav elements in the header*/
+		display: none;
+	}
+	#icon {
+		display: block;
+	}
+	/*#small-nav {
+		display: block;*/
+	}
+}
+
+
+
+
