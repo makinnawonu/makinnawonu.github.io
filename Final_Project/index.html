@@ -14,6 +14,7 @@
 		<div class="copyright-logo"><a href="http://developer.nytimes.com"><img src="images/others/copyright-logo.png"></a></div>
 			
 	</header>
+	<div id="before">
 	<div class="clear"></div>
 	<div class="value-prop">
 		<p>So what might be in store for you this weekend? Click the button below to find out!</p>
@@ -24,39 +25,49 @@
 	<div class="adventure-gif">
 		<img src="images/gifs/carl-up.gif">
 	</div>
+	</div> <!-- before -->
+	
 
-	<header class="event">This Weekend's Event: <a href="http:\/\/nytimes.com\/events\/theater\/off-broadway\/sleep-no-more-135.html" class="event-detail-url">Sleep No More</a></header>
-	<div id="category-image">
-	</div>
-	<!-- here, but in the js, you will add a class that will correspond to certain images based on the category of the listing that is returned-->
+				<div id="results_div">
 
-	<section id="web-description">
-		<p>Punchdrunk, a British site-specific theater company, has taken over three abandoned warehouses to enact the sorry sights of the murderous Macbeths&#8217; career as a movable orgy. The result suggests what might have happened if Stanley Kubrick (of &#8220;The Shining&#8221;) had designed the Haunted Mansion at Disney World (2:00).&#160;</p>
-        
-	</section>
-	<div class="clear"></div>
-	<section id="stats">
-		<ul>
-			<li>City: New York</li>
-			<li>Neighborhood: Chelsea</li>
-			<li>Part of a Festival?: No</li>
-			<li>Free?: No</li>
-			<li>Kid Friendly?: No</li>
-			<li>NYT Critic's Pick?: No</li>
-			<li>Closing Date: None right now</li>
-		</ul>
-		
-	</section>
-	<div class="clear"></div>
-	<button class="adventure-button">
-		<p>Want to try again?</p>
-	</button>
+				<header class="event_header">This Weekend's Event: <span class="event_name"></span> <span class="event_detail_url"></span>
+				</header>
+
+				<div id="category-image"></div>
+				<!-- here, but in the js, you will add a class that will correspond to certain images based on the category of the listing that is returned-->
+
+				<section id="web_description"></section>
+
+				<div class="clear"></div>
+
+				<section id="stats">
+					<ul>
+						<li>City: <span id="city"></span></li>
+						<li>NYT Critic's Pick: <span id="times_pick"></span></li>
+						<li>Neighborhood: <span id="neighborhood"></span></li>
+						<li>Critic: <span id="critic_name"></span></li>
+						<li>Venue: <span id="venue_name"></span> <span id="venue_detail_url"></span> </li>
+						<li>Kid Friendly: <span id="kid_friendly"></span></li>
+						<li>Price: <span id="price"></span></li>
+						<li>Event Time Details: <span id="date_time_description"></span></li>
+					</ul>
+					
+				</section>
+				<div class="clear"></div>
+				<button class="adventure-button">
+					<p>Ready to find your next adventure?</p>
+				</button>
+
+				</div> <!-- testing-div -->
 
 
-	<footer>
+	<div id="raw-json"></div>
+	<div id="num-results-test"></div>
+	<footer id="footer">
 		
 	</footer>
 	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+		<script src="js/app.js"></script>
 		<script src="js/index.js"></script>
 </body>
 </html>

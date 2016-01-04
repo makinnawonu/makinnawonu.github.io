@@ -1,0 +1,24 @@
+/*we're going to use jquery to add a class when 
+we're a certain distance from the top so that we 
+can apply different styling depending on whether
+we're seeing the expanded header or the shorter
+version*/
+
+
+
+header {
+	position: fixed;
+	background-color: blue;
+	width: 100%;
+	font-size: 50px;
+	color: white;
+	font-family: helvetica, serif;
+	/*transition: all 0.5s ease;*/
+	transition: font-size 1.5s, background-color 3.5s ease;
+	/*you can have different elements change at different rates in the same line of css*/
+}
+
+header.sticky {
+	background-color: red;
+	font-size: 24px;
+}

@@ -4,9 +4,13 @@
 
 $(document).ready(function () {
 
-$('SOMETHING').click(chooseRandomEvent);
+	$('.adventure-button').click(function () {
+		$()
+	})
 
-function chooseRandomEvent() {
+	$('SOMETHING').click(chooseRandomEvent);
+
+	function chooseRandomEvent() {
 
 	//the api call?
 	//something to choose a random version
@@ -18,7 +22,7 @@ function chooseRandomEvent() {
 
 
 
-$('SOMETHING ELSE').click(chooseRandomEvent);
+	$('SOMETHING ELSE').click(chooseRandomEvent);
 	
 })
 

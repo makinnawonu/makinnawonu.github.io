@@ -63,7 +63,7 @@ button {
 }
 
 #category-image {
-	background-image: url(images/others/theater-test.png);
+	background-image: url(../images/others/theater-test.png);
 	width: 33%;
 	height: 200px;
 	background-color: black;
@@ -113,6 +113,37 @@ button {
 
 }
 
+#results_div {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+header.event_header {
+	color: black;
+	font-size: 50px;
+	margin: 0 auto;
+	width: 90%;
+	height: 100px;
+	text-align: center;
+}
+
+header.a:link {
+	color: red;
+}
+
+header.a:visited {
+	color: green;
+}
+
+header.a:hover {
+	color: yellow;
+}
+
+header.a:active {
+	color: pink;
+}
+
 section p {
 	color: blue;
 	font-size: 25px;
@@ -124,6 +155,20 @@ li {
 	font-size: 25px;
 }
 
+#before {
+	background-color: red;
+}
 
+#after {
+	background-color: green;
+}
 
+#footer {
+	background-color: orange;
+	color: white;
+}
+#num-results-test {
+	background-color: red;
+	color: white;
+}
 
