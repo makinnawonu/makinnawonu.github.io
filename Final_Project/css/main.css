@@ -62,6 +62,10 @@ button {
 	text-align: center;
 }
 
+#results_div {
+	display: none;
+}
+
 #category-image {
 	background-image: url(../images/others/theater-test.png);
 	width: 33%;
