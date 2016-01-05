@@ -2,8 +2,28 @@
 
 $(document).ready(function () {
 
-	var number = Math.floor(Math.random() * 40);
-	console.log(number)
+	// $('.adventure-button').click(function () {
+	// 	var number = Math.floor(Math.random() * 40);
+	// console.log(number)
+	// }) RIGHT NOW THAT ISN'T WORKING
+
+	//$('.adventure-button').click(randomNum)
+
+	var num
+
+	function randomNum () {
+		return Math.floor(Math.random() * 40)
+		console.log(' made a random number')
+	}
+
+	$('.adventure-button').click(randomNum)
+
+	var num = randomNum()
+	//instead of defining a variable by running a function to get a number, make a function
+	//to get the random number, then define the variable as that function
+
+	// var number = Math.floor(Math.random() * 40);
+	// console.log(number)
 
 	$('.adventure-button').click(function () {
 		makeAjaxCall()
@@ -19,7 +39,7 @@ $(document).ready(function () {
 			console.log('Success!')
 			console.log(res)
 
-			//writeJSON(res)
+			writeJSON(res)
 			writeCopyright(res)
 			//getResults(res)
 			getEventName(res)
@@ -42,12 +62,12 @@ $(document).ready(function () {
 		})
 	}
 
-	// function writeJSON (ajaxRes) {
-	// 	$('#raw-json').text(JSON.stringify(ajaxRes))
-	// }
+	function writeJSON (ajaxRes) {
+		$('#raw-json').text(JSON.stringify(ajaxRes))
+	}
 
 	function getEventName (ajaxRes) {
-		var event_name = ajaxRes.results[number].event_name
+		var event_name = ajaxRes.results[num].event_name
 
 		$('.event_name').html(event_name)
 		//you need to use this to grab the name of the event
@@ -55,7 +75,7 @@ $(document).ready(function () {
 	}
 
 	function writeEventURL (ajaxRes) {
-		var event_detail_url = ajaxRes.results[number].event_detail_url
+		var event_detail_url = ajaxRes.results[num].event_detail_url
 		var event_name = $('.event_name').text()
 		$('.event_name').html("")
 		//you need to grab the name and store the value because this function
@@ -65,25 +85,25 @@ $(document).ready(function () {
 	}
 
 	function writeDescription (ajaxRes) {
-		var web_description = ajaxRes.results[number].web_description
+		var web_description = ajaxRes.results[num].web_description
 
 		$('#web_description').html(web_description)
 	}
 
 	function writeCity (ajaxRes) {
-		var city = ajaxRes.results[number].city
+		var city = ajaxRes.results[num].city
 
 		$('#city').html(city)
 	}
 
 	function writeNeighborhood (ajaxRes) {
-		var neighborhood = ajaxRes.results[number].neighborhood
+		var neighborhood = ajaxRes.results[num].neighborhood
 
 		$('#neighborhood').html(neighborhood)
 	}
 
 	function writeTimesPick (ajaxRes) {
-		var times_pick = ajaxRes.results[number].times_pick
+		var times_pick = ajaxRes.results[num].times_pick
 		if (times_pick == true) {
 			$('#times_pick').html('Yes')
 		} else {
@@ -92,19 +112,19 @@ $(document).ready(function () {
 	}
 
 	function writeCritic (ajaxRes) {
-		var critic_name = ajaxRes.results[number].critic_name
+		var critic_name = ajaxRes.results[num].critic_name
 
 		$('#critic_name').html(critic_name)
 	}
 
 	function getVenue (ajaxRes) {
-		var venue_name = ajaxRes.results[number].venue_name
+		var venue_name = ajaxRes.results[num].venue_name
 
 		$('#venue_name').html(venue_name)
 	}
 
 	function writeVenueURL (ajaxRes) {
-		var venue_detail_url = ajaxRes.results[number].venue_detail_url
+		var venue_detail_url = ajaxRes.results[num].venue_detail_url
 		var venue_name = $('#venue_name').text()
 		$('#venue_name').html("")
 
@@ -112,7 +132,7 @@ $(document).ready(function () {
 	}
 
 	function writeKidFriendly (ajaxRes) {
-		var kid_friendly = ajaxRes.results[number].kid_friendly
+		var kid_friendly = ajaxRes.results[num].kid_friendly
 
 		if (kid_friendly == true) {
 			$('#kid_friendly').html('Yes')
@@ -122,7 +142,7 @@ $(document).ready(function () {
 	}
 
 	function writeDateTime (ajaxRes) {
-		var date_time_description = ajaxRes.results[number].date_time_description
+		var date_time_description = ajaxRes.results[num].date_time_description
 
 		$('#date_time_description').html(date_time_description)
 
@@ -136,7 +156,7 @@ $(document).ready(function () {
 	}
 
 	function writeIsFree (ajaxRes) {
-		var free = ajaxRes.results[number].free
+		var free = ajaxRes.results[num].free
 
 		if (free == true) {
 			$('#price').html('Free')
@@ -146,7 +166,7 @@ $(document).ready(function () {
 	}
 
 	function writePrice (ajaxRes) {
-		var price = ajaxRes.results[number].price
+		var price = ajaxRes.results[num].price
 
 		if (price == "free") {
 			$('#price').html('Free')
