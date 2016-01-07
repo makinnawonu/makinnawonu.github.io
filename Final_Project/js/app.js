@@ -2,59 +2,58 @@
 
 $(document).ready(function () {
 
-	// $('.adventure-button').click(function () {
-	// 	var number = Math.floor(Math.random() * 40);
-	// console.log(number)
-	// }) RIGHT NOW THAT ISN'T WORKING
-
-	//$('.adventure-button').click(randomNum)
-
-	var num
 
 	function randomNum () {
-		return Math.floor(Math.random() * 40)
-		console.log(' made a random number')
+		console.log('I made a random number')
+		return Math.floor(Math.random() * 355)
 	}
 
-	$('.adventure-button').click(randomNum)
-
-	var num = randomNum()
 	//instead of defining a variable by running a function to get a number, make a function
 	//to get the random number, then define the variable as that function
 
-	// var number = Math.floor(Math.random() * 40);
-	// console.log(number)
-
 	$('.adventure-button').click(function () {
+		$('#loading').show()
+
+		num = randomNum()
+
 		makeAjaxCall()
 		console.log('I made the ajax call')
+		
 	})
 
 	function makeAjaxCall () {
 		$.ajax({
-			url: 'http://api.nytimes.com/svc/events/v2/listings.json?&filters=category:(-Movies)&limit=50&date_range=2015-01-01:2016-12-31&api-key=700d159ff639b606164f25bf2aec2dd6:15:67386384',
+			url: 'http://api.nytimes.com/svc/events/v2/listings.json?&filters=category:(-Movies)&limit=500&date_range=2016-01-01:2016-12-31&api-key=700d159ff639b606164f25bf2aec2dd6:15:67386384',
 			type: 'GET',
 		})
 		.done(function (res) {
 			console.log('Success!')
+			$('#loading').hide()
+			$('#results_div').show()
 			console.log(res)
+			var num = randomNum()
+			console.log(num)
+			var evt = res.results[num]
+			//creating the evt variable allows you to skip writing res.results[num] or some version of that in all of the functions that require digging into a sub object
 
-			writeJSON(res)
+
+			//writeJSON(evt)
 			writeCopyright(res)
+			//leave copyright alone because this is coming from the main object
 			//getResults(res)
-			getEventName(res)
-			writeEventURL(res)
-			writeDescription(res)
-			writeCity(res)
-			writeNeighborhood(res)
-			writeTimesPick(res)
-			writeCritic(res)
-			getVenue(res)
-			writeVenueURL(res)
-			writeKidFriendly(res)
-			writeDateTime(res)
-			writeIsFree(res)
-			writePrice(res)
+			getEventName(evt)
+			writeEventURL(evt)
+			writeDescription(evt)
+			writeCity(evt)
+			writeNeighborhood(evt)
+			writeTimesPick(evt)
+			writeCritic(evt)
+			getVenue(evt)
+			writeVenueURL(evt)
+			writeKidFriendly(evt)
+			writeDateTime(evt)
+			writeIsFree(evt)
+			writePrice(evt)
 			
 		})
 		.fail(function (xhr) {
@@ -62,20 +61,20 @@ $(document).ready(function () {
 		})
 	}
 
-	function writeJSON (ajaxRes) {
-		$('#raw-json').text(JSON.stringify(ajaxRes))
-	}
+	// function writeJSON (ajaxRes) {
+	// 	$('#raw-json').text(JSON.stringify(ajaxRes))
+	// }
 
-	function getEventName (ajaxRes) {
-		var event_name = ajaxRes.results[num].event_name
+	function getEventName (evt) {
+		var event_name = evt.event_name
 
 		$('.event_name').html(event_name)
 		//you need to use this to grab the name of the event
 		//you also have to display it so you can grab it in the function with the url
 	}
 
-	function writeEventURL (ajaxRes) {
-		var event_detail_url = ajaxRes.results[num].event_detail_url
+	function writeEventURL (evt) {
+		var event_detail_url = evt.event_detail_url
 		var event_name = $('.event_name').text()
 		$('.event_name').html("")
 		//you need to grab the name and store the value because this function
@@ -84,26 +83,27 @@ $(document).ready(function () {
 		$('.event_detail_url').html('<a href="' + event_detail_url + '">' + event_name + '</a>')
 	}
 
-	function writeDescription (ajaxRes) {
-		var web_description = ajaxRes.results[num].web_description
+	function writeDescription (evt) {
+		var web_description = evt.web_description
 
 		$('#web_description').html(web_description)
 	}
 
-	function writeCity (ajaxRes) {
-		var city = ajaxRes.results[num].city
+	function writeCity (evt) {
+		var city = evt.city
 
 		$('#city').html(city)
 	}
 
-	function writeNeighborhood (ajaxRes) {
-		var neighborhood = ajaxRes.results[num].neighborhood
+	function writeNeighborhood (evt) {
+		var neighborhood = evt.neighborhood
+	//var neighborhood = ajaxRes.results[num].neighborhood
 
 		$('#neighborhood').html(neighborhood)
 	}
 
-	function writeTimesPick (ajaxRes) {
-		var times_pick = ajaxRes.results[num].times_pick
+	function writeTimesPick (evt) {
+		var times_pick = evt.times_pick
 		if (times_pick == true) {
 			$('#times_pick').html('Yes')
 		} else {
@@ -111,28 +111,28 @@ $(document).ready(function () {
 		}
 	}
 
-	function writeCritic (ajaxRes) {
-		var critic_name = ajaxRes.results[num].critic_name
+	function writeCritic (evt) {
+		var critic_name = evt.critic_name
 
 		$('#critic_name').html(critic_name)
 	}
 
-	function getVenue (ajaxRes) {
-		var venue_name = ajaxRes.results[num].venue_name
+	function getVenue (evt) {
+		var venue_name = evt.venue_name
 
 		$('#venue_name').html(venue_name)
 	}
 
-	function writeVenueURL (ajaxRes) {
-		var venue_detail_url = ajaxRes.results[num].venue_detail_url
+	function writeVenueURL (evt) {
+		var venue_detail_url = evt.venue_detail_url
 		var venue_name = $('#venue_name').text()
 		$('#venue_name').html("")
 
 		$('#venue_detail_url').html('<a href="' + venue_detail_url + '">' + venue_name + '</a>')
 	}
 
-	function writeKidFriendly (ajaxRes) {
-		var kid_friendly = ajaxRes.results[num].kid_friendly
+	function writeKidFriendly (evt) {
+		var kid_friendly = evt.kid_friendly
 
 		if (kid_friendly == true) {
 			$('#kid_friendly').html('Yes')
@@ -141,8 +141,8 @@ $(document).ready(function () {
 		}
 	}
 
-	function writeDateTime (ajaxRes) {
-		var date_time_description = ajaxRes.results[num].date_time_description
+	function writeDateTime (evt) {
+		var date_time_description = evt.date_time_description
 
 		$('#date_time_description').html(date_time_description)
 
@@ -155,8 +155,8 @@ $(document).ready(function () {
 		}
 	}
 
-	function writeIsFree (ajaxRes) {
-		var free = ajaxRes.results[num].free
+	function writeIsFree (evt) {
+		var free = evt.free
 
 		if (free == true) {
 			$('#price').html('Free')
@@ -165,8 +165,8 @@ $(document).ready(function () {
 		}
 	}
 
-	function writePrice (ajaxRes) {
-		var price = ajaxRes.results[num].price
+	function writePrice (evt) {
+		var price = evt.price
 
 		if (price == "free") {
 			$('#price').html('Free')
@@ -185,8 +185,12 @@ $(document).ready(function () {
 		$('#before').hide()
 	})
 
-	$('.adventure-button').click(function () {
-		$('#results_div').show()
+	$('#retry-button').click(function () {
+		$('#results_div').hide()
 	})
+
+	// $('.adventure-button').click(function () {
+	// 	$('#results_div').show()
+	// })
 
 })
