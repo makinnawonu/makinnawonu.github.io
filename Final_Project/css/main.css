@@ -1,24 +1,41 @@
 #container {
 	margin: 0 auto;
 	width: 100%;
+	background-color: #963019;
+}
+
+header {
+	margin-top: 20px;
+	color: #f6f1ed;
 }
 
 .copyright-logo {
 	display: block;
 	margin: 0 auto;
 	text-align: center;
+	padding-top: 5px;
+	background-color: #16174f;
 }
 
 h1 {
 	font-size: 100px;
 	text-align: center;
+	padding-bottom: 5px;
+	border-bottom: 15px #16174f solid;
 	overflow: none;
+}
+
+#before {
+	padding-top: 15px;
+	background-color: #16174f;
 }
 
 .value-prop {
 	font-size: 20px;
 	height: 50px;
 	text-align: center;
+	/*color: #f6f1ed;*/
+	color: #667467;
 	
 }
 
@@ -175,17 +192,14 @@ li {
 	font-size: 25px;
 }
 
-#before {
-	background-color: red;
-}
-
 #after {
 	background-color: green;
 }
 
-#footer {
-	background-color: orange;
-	color: white;
+footer {
+	margin-top: 20px;
+	color: #f6f1ed;
+	text-align: center;
 }
 #num-results-test {
 	background-color: red;

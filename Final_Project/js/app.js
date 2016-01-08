@@ -192,7 +192,7 @@ $(document).ready(function () {
 	function writeCopyright (ajaxRes) {
 		var copyright = ajaxRes.copyright
 
-		$('#footer').html(copyright)
+		$('#footer').html("Data " + copyright)
 	}
 
 	$('.adventure-button').click(function () {
