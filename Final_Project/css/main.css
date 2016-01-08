@@ -90,6 +90,13 @@ button {
 	display: none;
 }
 
+#stats {
+	outline: 1px pink solid;
+	height: 200px;
+	width: 80%;
+	margin: 0 auto;
+}
+
 #category-image {
 /*	background-image: url(../images/others/theater-test.png);*/
 	width: 33%;
@@ -189,7 +196,7 @@ section p {
 li {
 	float: left;
 	width: 50%;
-	font-size: 25px;
+	font-size: 30px;
 }
 
 #after {
@@ -201,6 +208,11 @@ footer {
 	color: #f6f1ed;
 	text-align: center;
 }
+
+#signature {
+	font-size: 25px;
+}
+
 #num-results-test {
 	background-color: red;
 	color: white;
