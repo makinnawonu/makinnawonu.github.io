@@ -1,3 +1,7 @@
+Good job matching comp!
+
+The one difference I see is not having our images contained with their sections.  Easiest way to do this is give them a width of 100%
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,6 +14,7 @@
 
 	<body>
 	<div class="container">
+	<!-- All elements nested inside .container should be indented one tab so code matches our DOM structure -->
 	<div>
 		<h1>Sartre's List</h1>
 		<h2>Better-Dressed People</h2>
@@ -24,6 +29,7 @@
 		<li><a href="">About</a></li>
 	</ul>
 	</div><!-- top nav -->
+	<!-- sections.... i like it.  good use of semantic HTML -->
 	<section>
 		<p class="date">11/12/13</p>
 		<p class="blog-title">On the Street in Brooklyn</p>
@@ -37,9 +43,11 @@
 		<p class="blog-title">Vintage in Vogue</p>
 		<div class="image-center"><img src="img/fashion_photo2.jpeg"></div>
 		<p>Selfies sunt Tumblr, delectus small batch DIY umami sint. Polaroid chambray selfies McSweeney's Cosby sweater, Pitchfork tattooed assumenda Wes Anderson Blue Bottle twee Carles ennui. Nisi locavore fugiat sapiente salvia aliqua. Shoreditch kogi exercitation fashion axe. Wolf semiotics Pinterest, laboris quis master cleanse tousled small batch street art bespoke fingerstache dreamcatcher ethical labore. Dreamcatcher iPhone typewriter, tote bag four loko fanny pack master cleanse organic PBR reprehenderit actually. Craft beer drinking vinegar wayfarers, pork belly narwhal pariatur polaroid cupidatat in 8-bit distillery anim literally.</p>
+		<!-- might be cleaniner to get rid of the p wrapping this link and make the link a block element -->
 		<p class="continues-link"><a href="">Continues...</a></p>
 		<hr class="border">
 	</section><!-- second blog post -->
+	<!-- might be more semantic to make this block of code a footer instead of div -->
 	<div class="bottom-nav">
 		<p><a href="">Home</a> | <a href="">Women's</a> | <a href="">Men's</a> | <a href="">On the Street</a> | <a href="">The Catwalk</a> | <a href="">AdWatch</a> | <a href="">About</a> | <a href="">Tips</a></p>
 	</div><!-- bottom nav -->

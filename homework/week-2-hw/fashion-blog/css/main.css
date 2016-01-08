@@ -11,6 +11,7 @@ h1 {
 	color: #DD0000;
 	margin-bottom: 0px;
 }
+should put line space between these elements if doing between others. for sake of tidiness! 
 h2 {
 	font-weight: lighter;
 	font-size: 28px;
@@ -32,12 +33,14 @@ li {
 	font-style: lighter;
 }
 
+/*CRUFT can remove?*/
 .top-nav {
 	;
 }
 
 ul {
 	padding: 0;
+	/*extra line here*/
 
 }
 
@@ -59,6 +62,7 @@ ul {
 }
 
 .bottom-nav {
+	/*protip can shorten to #ccc*/
 	color: #cccccc
 }
 

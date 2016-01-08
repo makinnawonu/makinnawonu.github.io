@@ -1,3 +1,5 @@
+// Great job.  See my answer to your question at bottom of file.
+
 // User flow:
 // 1: user enters numerical value into #newEntry
 // 2: user pushes enter key (submits the form), the new line is appended to the <tbody id="entries">
@@ -16,6 +18,7 @@ $(document).ready(function () {
 
 	var total = 0 //this MUST be defined outside of teh function otherwise the total will be reset to zero EVERY TIME THE FUNCTION RUNS
 
+// formatting: this function should be indented since inside document ready
 $('#entry').submit(function (event) {
 	//need to use the id of the actual form or form selector
 	//note the id of the input field
@@ -42,5 +45,6 @@ $('#entry').submit(function (event) {
 
 //You still need to figure out a way to prevent this from breaking if you put something that is not a number in the field
 
+// You can check "typeof" for newthing and if it's not a number "return" to stop the rest of the submit function from happening 
 
 
