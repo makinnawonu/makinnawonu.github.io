@@ -1,0 +1,33 @@
+.row div {
+	outline: 1px solid black;
+	background: rgb(222, 222, 222);
+	height: 50px;
+}
+
+#container2 {
+	margin-top: 10px;
+}
+
+/*.test {
+	outline: 1px solid black;
+	background: rgb(222, 222, 222);
+	height: 50px;
+}*/
+
+#container3 {
+	margin-top: 10px;
+}
+
+.image {
+	float: left;
+	height: 20px;
+	width: 40%;
+	background-color: red;
+}
+
+.text {
+	float: right;
+	height: 40px;
+	width: 60%
+	background-color: blue;
+}

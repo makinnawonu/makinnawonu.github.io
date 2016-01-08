@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 	function randomNum () {
 		console.log('I made a random number')
-		return Math.floor(Math.random() * 355)
+		return Math.floor(Math.random() * 395)
 	}
 
 	//instead of defining a variable by running a function to get a number, make a function
@@ -34,6 +34,7 @@ $(document).ready(function () {
 			var num = randomNum()
 			console.log(num)
 			var evt = res.results[num]
+			window.evt = res
 			//creating the evt variable allows you to skip writing res.results[num] or some version of that in all of the functions that require digging into a sub object
 
 
@@ -92,14 +93,23 @@ $(document).ready(function () {
 	function writeCity (evt) {
 		var city = evt.city
 
-		$('#city').html(city)
+		if (!city) {
+			$('#city').html('New York City')
+		} else {
+			$('#city').html(city)
+		}
 	}
 
 	function writeNeighborhood (evt) {
 		var neighborhood = evt.neighborhood
+
+		if(!neighborhood) {
+			$('#neighborhood').html('Unknown')
+		} else {
+			$('#neighborhood').html(neighborhood)
+		}
 	//var neighborhood = ajaxRes.results[num].neighborhood
 
-		$('#neighborhood').html(neighborhood)
 	}
 
 	function writeTimesPick (evt) {
@@ -114,7 +124,11 @@ $(document).ready(function () {
 	function writeCritic (evt) {
 		var critic_name = evt.critic_name
 
-		$('#critic_name').html(critic_name)
+		if (!critic_name) {
+			$('#critic_name').html('Unknown')
+		} else {
+			$('#critic_name').html(critic_name)
+		}
 	}
 
 	function getVenue (evt) {
@@ -192,5 +206,8 @@ $(document).ready(function () {
 	// $('.adventure-button').click(function () {
 	// 	$('#results_div').show()
 	// })
+
+	//Array.prototype.forEach.call(evt.results, function(result, index){console.log(index, result.city)});
+	//use the thing above in the console to find all of the missing parameters, just replace .city with what you're looking for
 
 })
