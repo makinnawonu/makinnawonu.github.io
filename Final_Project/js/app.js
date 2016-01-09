@@ -16,6 +16,8 @@ $(document).ready(function () {
 
 		num = randomNum()
 
+
+
 		makeAjaxCall()
 		console.log('I made the ajax call')
 		
@@ -55,6 +57,8 @@ $(document).ready(function () {
 			writeDateTime(evt)
 			writeIsFree(evt)
 			writePrice(evt)
+			getCategory(evt)
+
 			
 		})
 		.fail(function (xhr) {
@@ -65,6 +69,17 @@ $(document).ready(function () {
 	// function writeJSON (ajaxRes) {
 	// 	$('#raw-json').text(JSON.stringify(ajaxRes))
 	// }
+
+	function getCategory (evt, category) {
+		var category = evt.category
+
+		if (!category) {
+			$('#category-image img').attr('src', 'images/others/ifNoneDefault.png')
+		} else {
+			$('#category-image img').attr('src', 'images/others/' + category + '.png')
+		}
+		console.log(category)
+	}
 
 	function getEventName (evt) {
 		var event_name = evt.event_name
@@ -202,10 +217,6 @@ $(document).ready(function () {
 	$('#retry-button').click(function () {
 		$('#results_div').hide()
 	})
-
-	// $('.adventure-button').click(function () {
-	// 	$('#results_div').show()
-	// })
 
 	//Array.prototype.forEach.call(evt.results, function(result, index){console.log(index, result.city)});
 	//use the thing above in the console to find all of the missing parameters, just replace .city with what you're looking for

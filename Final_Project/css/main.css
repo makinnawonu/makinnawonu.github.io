@@ -41,9 +41,12 @@ h1 {
 
 #loading {
 	text-align: center;
-	font-size: 100px;
-	height: 500px;
+	font-size: 200px;
+	height: 383px;
 	display: none;
+	padding-top: 20px;
+	outline: 1px pink solid;
+	color: #f6f1ed;
 }
 
 .clear {
@@ -97,6 +100,21 @@ button {
 	margin: 0 auto;
 }
 
+#real-stats {
+	outline: 1px pink solid;
+	height: 150px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#left-column {
+	float: left;
+}
+
+#right-column {
+	float: right;
+}
+
 #category-image {
 /*	background-image: url(../images/others/theater-test.png);*/
 	width: 33%;
@@ -105,6 +123,11 @@ button {
 	float: left;
 	outline: 1px pink solid;
 	text-align: center;
+}
+
+#web_description {
+	float: right;
+	width: 60%
 }
 
 #image-background {
@@ -188,6 +211,10 @@ header.a:active {
 	color: pink;
 }
 
+section#stats {
+	background-color: #f6f1ed;
+}
+
 section p {
 	color: blue;
 	font-size: 25px;
@@ -196,7 +223,7 @@ section p {
 li {
 	float: left;
 	width: 50%;
-	font-size: 30px;
+	font-size: 25px;
 }
 
 #after {
