@@ -2,6 +2,7 @@
 	margin: 0 auto;
 	width: 100%;
 	background-color: #963019;
+	color: #f6f1ed;
 }
 
 header {
@@ -17,6 +18,10 @@ header {
 	background-color: #16174f;
 }
 
+h1 a {
+	color: #667467;
+}
+
 h1 {
 	font-size: 100px;
 	text-align: center;
@@ -30,23 +35,31 @@ h1 {
 	background-color: #16174f;
 }
 
-.value-prop {
-	font-size: 20px;
+div.value-prop {
+	font-size: 30px;
 	height: 50px;
 	text-align: center;
 	/*color: #f6f1ed;*/
 	color: #667467;
-	
+	display: inline-block;
+	margin: 0 auto;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-style: italic;
 }
 
 #loading {
 	text-align: center;
 	font-size: 200px;
-	height: 383px;
+	height: 444px;
 	display: none;
 	padding-top: 20px;
-	outline: 1px pink solid;
+	/*outline: 1px pink solid;*/
 	color: #f6f1ed;
+	background-color: #16174f;
+	vertical-align: center;
+	padding-top: 75px;
 }
 
 .clear {
@@ -58,22 +71,23 @@ button {
 }
 
 .adventure-button {
-	background-color:#e4685d;
+	/*background-color:#e4685d;*/
+	background-color: #667467;
 	-moz-border-radius:25px;
 	-webkit-border-radius:25px;
-	border-radius:25px;
-	border:1px solid #ffffff;
+	/*border-radius:25px;*/
+	border:1px solid #16174f;
 	display:block;
 	width: 40%;
 	margin: 0 auto;
 	text-align: center;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: Arial;
 	font-size:17px;
 	padding:20px 43px;
 	text-decoration:none;
-	text-shadow:0px 2px 0px #b23e35;
+	/*text-shadow:0px 2px 0px #b23e35;*/
 }
 .adventure-botton:hover {
 	background-color:#eb675e;
@@ -87,10 +101,16 @@ button {
 	display: block;
 	margin: 0 auto;
 	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #results_div {
 	display: none;
+	background-color: #16174f;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
 }
 
 #stats {
@@ -102,17 +122,43 @@ button {
 
 #real-stats {
 	outline: 1px pink solid;
-	height: 150px;
-	width: 80%;
+	height: 100%;
+	width: 75%;
 	margin: 0 auto;
+	background-color: #f6f1ed;
+	color: #667467;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding: 15px;
 }
 
 #left-column {
 	float: left;
+	width: 45%;
+	height: 100%;
+	/*padding: 5px;*/
 }
 
 #right-column {
 	float: right;
+	width: 45%;
+	height: 100%;
+	/*padding: 5px;*/
+	padding-left: 10%;
+}
+
+.entry {
+	font-style: bold;
+}
+
+.api-entry {
+	font-style: italic;
+}
+
+div #photo_description {
+	width: 90%;
+	height: 100%;
 }
 
 #category-image {
@@ -121,13 +167,16 @@ button {
 	height: 200px;
 	/*background-color: black;*/
 	float: left;
-	outline: 1px pink solid;
+	/*outline: 1px pink solid;*/
 	text-align: center;
 }
 
 #web_description {
 	float: right;
-	width: 60%
+	width: 60%;
+	outline: 1px pink solid;
+	margin-right: 50px;
+	height: 100%;
 }
 
 #image-background {
@@ -137,62 +186,29 @@ button {
 
 }
 
+/*header.event_header {
+	display: block;
+}*/
+
 .event {
 	font-size: 40px;
 }
-
-#movies
-
-#theater
-
-#for-children
-
-#art-museums
-
-#art-public-art
-
-#art-out-of-town
-
-#theater-off-broadway
-
-#theater-broadway
-
-#spare-times-museums
-
-#spare-times-walking-tours
-
-#pop
-
-#jazz
-
-#comedy
-
-#dance
-
-#classical-music
-
-#classical-opera
 
 #web-description p {
 	height: 200px;
 	width: 75%;
 	float: right;
+	color: #f6f1ed;
 
-}
-
-#results_div {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 20px;
 }
 
 header.event_header {
-	color: black;
+	/*color: black;*/
 	font-size: 50px;
 	margin: 0 auto;
 	width: 90%;
-	height: 100px;
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 header.a:link {
@@ -216,18 +232,21 @@ section#stats {
 }
 
 section p {
-	color: blue;
 	font-size: 25px;
 }
 
-li {
+/*li {
 	float: left;
 	width: 50%;
 	font-size: 25px;
 }
-
-#after {
+*/
+/*#after {
 	background-color: green;
+}*/
+
+#retry-button {
+	margin-bottom: 20px;
 }
 
 footer {

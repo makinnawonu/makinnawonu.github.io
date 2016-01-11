@@ -19,7 +19,7 @@
 	<div id="before">
 		<div class="clear"></div>
 		<div class="value-prop">
-			<p>Your social life needs more random. Click the button below to see what's in store for you . . .</p>
+			<p>Bring more random to your life</p>
 		</div>
 		<button class="adventure-button">
 			<p>Ready? Set? GO!</p>
@@ -32,43 +32,45 @@
 
 				<div id="results_div">
 
-				<header class="event_header">This Week's Event: <span class="event_name"></span> <span class="event_detail_url"></span>
-				</header>
+				<div><header class="event_header">This Week's Event: <span class="event_name"></span> <span class="event_detail_url"></span>
+				</header></div>
 
-				<div id="category-image"><span><img src="images/others/ifNoneDefault.png" id="image-background"></span></div>
-				<!-- here, but in the js, you will add a class that will correspond to certain images based on the category of the listing that is returned   <img src="../images/others/theater-test.png">-->
+				<div id="photo_description">
+					<div id="category-image"><span><img src="images/others/ifNoneDefault.png" id="image-background"></span></div>
+					<!-- here, but in the js, you will add a class that will correspond to certain images based on the category of the listing that is returned   <img src="../images/others/theater-test.png">-->
 
-				<section id="web_description"></section>
+					<section id="web_description"></section>
+				</div><!-- The photo and the description -->
 
 				<div class="clear"></div>
-
+<!-- 
 				<section id="stats">
 					<ul>
-						<li>City: <span id="city"></span></li>
-						<li>NYT Critic's Pick: <span id="times_pick"></span></li>
-						<li>Neighborhood: <span id="neighborhood"></span></li>
-						<li>Critic: <span id="critic_name"></span></li>
-						<li>Venue: <span id="venue_name"></span> <span id="venue_detail_url"></span></li>
-						<li>Kid Friendly: <span id="kid_friendly"></span></li>
-						<li>Price: <span id="price"></span></li>
-						<li>Event Time Details: <span id="date_time_description"></span></li>
+						<li>City: <span></span></li>
+						<li>NYT Critic's Pick: <span></span></li>
+						<li>Neighborhood: <span></span></li>
+						<li>Critic: <span></span></li>
+						<li>Venue: <span></span> <span></span></li>
+						<li>Kid Friendly: <span></span></li>
+						<li>Price: <span></span></li>
+						<li>Event Time Details: <span></span></li>
 					</ul>
 					
-				</section>
+				</section> YOU CAN PROBABLY DELETE THIS-->
 				<div class="clear"></div>
 
 				<div id="real-stats">
 					<section id="left-column">
-						<p>City: <span id="city"></span></p>
-						<p>Neighborhood: <span id="neighborhood"></span></p>
-						<p>Venue: <span id="venue_name"></span> <span id="venue_detail_url"></span></p>
-						<p>Price: <span id="price"></span></p>
+						<p><span class="entry">City: </span> <span id="city" class="api-entry"></span></p>
+						<p><span class="entry">Neighborhood: </span><span id="neighborhood" class="api-entry"></span></p>
+						<p><span class="entry">Venue: </span><span id="venue_name" class="api-entry"></span> <span id="venue_detail_url"></span></p>
+						<p><span class="entry">Price: </span><span id="price" class="api-entry"></span></p>
 					</section>
 					<section id="right-column">
-						<p>NYT Critic's Pick: <span id="times_pick"></span></p>
-						<p>Critic: <span id="critic_name"></span></p>
-						<p>Kid Friendly: <span id="kid_friendly"></span></p>
-						<p>Event Time Details: <span id="date_time_description"></span></p>
+						<p><span class="entry">NYT Critic's Pick: </span><span id="times_pick" class="api-entry"></span></p>
+						<p><span class="entry">Critic: </span><span id="critic_name" class="api-entry"></span></p>
+						<p><span class="entry">Kid Friendly: </span><span id="kid_friendly" class="api-entry"></span></p>
+						<p><span class="entry">Event Time Details: </span><span id="date_time_description" class="api-entry"></span></p>
 					</section>
 				</div>
 				<div class="clear"></div>
