@@ -1,7 +1,7 @@
 #container {
 	margin: 0 auto;
 	width: 100%;
-	background-color: #963019;
+	background-color: #667467;
 	color: #f6f1ed;
 }
 
@@ -31,16 +31,16 @@ h1 {
 }
 
 #before {
-	padding-top: 15px;
+	/*padding-top: 15px;*/
 	background-color: #16174f;
 }
 
 div.value-prop {
-	font-size: 30px;
+	font-size: 50px;
 	height: 50px;
 	text-align: center;
 	/*color: #f6f1ed;*/
-	color: #667467;
+	color: #f6f1ed;
 	display: inline-block;
 	margin: 0 auto;
 	width: 100%;
@@ -72,7 +72,7 @@ button {
 
 .adventure-button {
 	/*background-color:#e4685d;*/
-	background-color: #667467;
+	background-color: #963019;
 	-moz-border-radius:25px;
 	-webkit-border-radius:25px;
 	/*border-radius:25px;*/
@@ -108,9 +108,8 @@ button {
 #results_div {
 	display: none;
 	background-color: #16174f;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 20px;
+	padding: 20px;
+
 }
 
 #stats {
@@ -131,6 +130,10 @@ button {
 	margin-bottom: 20px;
 	overflow: hidden;
 	padding: 15px;
+}
+
+#real-stats a {
+	color: #963019;
 }
 
 #left-column {
@@ -157,17 +160,17 @@ button {
 }
 
 div #photo_description {
-	width: 90%;
-	height: 100%;
+	margin: 0 5%;
+	outline: 1px solid red;
 }
 
 #category-image {
 /*	background-image: url(../images/others/theater-test.png);*/
-	width: 33%;
+	width: 25%;
 	height: 200px;
 	/*background-color: black;*/
 	float: left;
-	/*outline: 1px pink solid;*/
+	outline: 1px pink solid;
 	text-align: center;
 }
 
@@ -175,7 +178,6 @@ div #photo_description {
 	float: right;
 	width: 60%;
 	outline: 1px pink solid;
-	margin-right: 50px;
 	height: 100%;
 }
 
@@ -246,7 +248,10 @@ section p {
 }*/
 
 #retry-button {
-	margin-bottom: 20px;
+/*	margin-bottom: 20px;*/
+	display: block;
+	/*text-align: center;*/
+
 }
 
 footer {

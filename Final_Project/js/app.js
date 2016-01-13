@@ -149,7 +149,12 @@ $(document).ready(function () {
 	function getVenue (evt) {
 		var venue_name = evt.venue_name
 
-		$('#venue_name').html(venue_name)
+		if(!venue_name) {
+			$('#venue_name').html('Various')
+		} else {
+			$('#venue_name').html(venue_name)
+			console.log('i fixed the missing venue problem')
+		}
 	}
 
 	function writeVenueURL (evt) {
