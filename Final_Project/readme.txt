@@ -8,11 +8,19 @@ Palette one:
 #64706c - a bluish gray
 #935347 - ever so slightly purplish brown (but not really)
 
-Palette two:
+----------------------------------------------------------
+
+Palette two: YOU'RE USING THIS
 #16174f - a dark blue
-#963019 - a brownish orange
+#963019 - a brownish orangey red
 #f6f1ed - off white
 #667467 - an olivey green
+
+#95ccca - a light blue that I might use for the event name after you clicked on the link
+#6f210f - darker red for the on click
+#c73818 - brigher, lighter red for the hover
+
+----------------------------------------------------------
 
 Palette three
 #e6af4b - an orangey yellow

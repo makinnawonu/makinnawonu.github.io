@@ -112,15 +112,15 @@ button {
 
 }
 
-#stats {
+/*#stats {
 	outline: 1px pink solid;
 	height: 200px;
 	width: 80%;
 	margin: 0 auto;
-}
+}*/
 
 #real-stats {
-	outline: 1px pink solid;
+	/*outline: 1px pink solid;*/
 	height: 100%;
 	width: 75%;
 	margin: 0 auto;
@@ -133,8 +133,25 @@ button {
 }
 
 #real-stats a {
+	font-style: italic;
+}
+
+#real-stats a:link {
 	color: #963019;
 }
+
+#real-stats a:hover {
+	color: #c73818;
+}
+
+#real-stats a:active {
+	color: #6f210f;
+}
+
+#real-stats a:visited {
+	color: #b67d70;
+}
+
 
 #left-column {
 	float: left;
@@ -161,7 +178,7 @@ button {
 
 div #photo_description {
 	margin: 0 5%;
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
 }
 
 #category-image {
@@ -170,14 +187,14 @@ div #photo_description {
 	height: 200px;
 	/*background-color: black;*/
 	float: left;
-	outline: 1px pink solid;
+	/*outline: 1px pink solid;*/
 	text-align: center;
 }
 
 #web_description {
 	float: right;
-	width: 60%;
-	outline: 1px pink solid;
+	width: 72%;
+	/*outline: 1px pink solid;*/
 	height: 100%;
 }
 
@@ -213,20 +230,20 @@ header.event_header {
 	margin-bottom: 20px;
 }
 
-header.a:link {
-	color: red;
+header.event_header a:link {
+	color: #963019;
 }
 
-header.a:visited {
-	color: green;
+header.event_header a:visited {
+	color: #95ccca;
 }
 
-header.a:hover {
-	color: yellow;
+header.event_header a:hover {
+	color: #c73818;
 }
 
-header.a:active {
-	color: pink;
+header.event_header a:active {
+	color: #6f210f;
 }
 
 section#stats {
@@ -262,10 +279,100 @@ footer {
 
 #signature {
 	font-size: 25px;
+	margin-top: 10px;
 }
 
 #num-results-test {
 	background-color: red;
 	color: white;
 }
+
+/*768px to 1024*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 75px;
+  }
+
+  div.value-prop {
+  	font-size: 40px;
+  }
+
+  header.event_header {
+  	font-size: 40px;
+  }
+
+  section p {
+  	font-size: 20px;
+  }
+
+  #category-image {
+  	height: 150px;
+  }
+}
+
+/*480 to 767*/
+@media (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 60px;
+  }
+
+   div.value-prop {
+  	font-size: 30px;
+  }
+
+  .adventure-button {
+  	width: 50%;
+  }
+
+  header.event_header {
+  	font-size: 30px;
+  }
+  section p {
+  	font-size: 18px;
+  }
+
+  #category-image {
+  	height: 150px;
+  }
+
+  #signature {
+  	font-size: 20px;
+  }
+}
+
+/*480 to 767*/
+@media (max-width: 479px) {
+  h1 {
+    font-size: 50px;
+  }
+
+   div.value-prop {
+  	font-size: 25px;
+  }
+
+  .adventure-button {
+  	width: 50%;
+  	font-size: 14px;
+  }
+
+  header.event_header {
+  	font-size: 25px;
+  }
+  section p {
+  	font-size: 18px;
+  }
+
+  #category-image {
+  	height: 150px;
+  }
+
+  #signature {
+  	font-size: 18px;
+  }
+}
+
+
+
+
+
 

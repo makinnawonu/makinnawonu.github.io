@@ -3,9 +3,9 @@
 $(document).ready(function () {
 
 
-	function randomNum () {
+	function randomNum (num) {
 		console.log('I made a random number')
-		return Math.floor(Math.random() * 395)
+		return Math.floor(Math.random() * num)
 	}
 
 	//instead of defining a variable by running a function to get a number, make a function
@@ -25,15 +25,16 @@ $(document).ready(function () {
 
 	function makeAjaxCall () {
 		$.ajax({
-			url: 'http://api.nytimes.com/svc/events/v2/listings.json?&filters=category:(-Movies)&limit=500&date_range=2016-01-01:2016-12-31&api-key=700d159ff639b606164f25bf2aec2dd6:15:67386384',
+			url: 'http://api.nytimes.com/svc/events/v2/listings.json?&filters=category:(-Movies)&limit=500&date_range=2016-01-15:2016-12-31&api-key=700d159ff639b606164f25bf2aec2dd6:15:67386384',
 			type: 'GET',
 		})
 		.done(function (res) {
 			console.log('Success!')
 			$('#loading').hide()
 			$('#results_div').show()
+
 			console.log(res)
-			var num = randomNum()
+			var num = randomNum(res.num_results)
 			console.log(num)
 			var evt = res.results[num]
 			window.evt = res
@@ -157,13 +158,30 @@ $(document).ready(function () {
 		}
 	}
 
+	// function writeVenueURL (evt) {
+	// 	var venue_detail_url = evt.venue_detail_url
+	// 	var venue_name = $('#venue_name').text()
+	// 	$('#venue_name').html("")
+
+	
+	// 	$('#venue_detail_url').html('<a href="' + venue_detail_url + '">' + venue_name + '</a>')
+	// 		console.log('i removed the extra code for the missing venue URL')
+
+	// 		//use the venue website because this 
+	// 	}
+
 	function writeVenueURL (evt) {
-		var venue_detail_url = evt.venue_detail_url
+		var venue_website = evt.venue_website
 		var venue_name = $('#venue_name').text()
 		$('#venue_name').html("")
 
-		$('#venue_detail_url').html('<a href="' + venue_detail_url + '">' + venue_name + '</a>')
-	}
+	
+		$('#venue_detail_url').html('<a href="' + 'http://'+ venue_website + '">' + venue_name + '</a>')
+			console.log('i switched it out for the venue website')
+
+			//use the venue website because the venue_detail_url isn't very useful
+		}
+
 
 	function writeKidFriendly (evt) {
 		var kid_friendly = evt.kid_friendly
@@ -184,6 +202,8 @@ $(document).ready(function () {
 
 		if (printed_date_time_description == "continuing") {
 			$('#date_time_description').html("Ongoing Event")
+		} else if (printed_date_time_description == "ongoing") {
+			$('#date_time_description').html("Ongoing Event") 
 		} else {
 			$('#date_time_description').html(date_time_description)
 		}
@@ -222,6 +242,11 @@ $(document).ready(function () {
 	$('#retry-button').click(function () {
 		$('#results_div').hide()
 	})
+
+	// function imageCredit (evt) {
+	// 	var 
+	// 	//grab the category using jquery and then assign the image credit based on that as an absolute url
+	// }
 
 	//Array.prototype.forEach.call(evt.results, function(result, index){console.log(index, result.city)});
 	//use the thing above in the console to find all of the missing parameters, just replace .city with what you're looking for
