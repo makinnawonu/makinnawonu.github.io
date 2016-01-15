@@ -16,8 +16,6 @@ $(document).ready(function () {
 
 		num = randomNum()
 
-
-
 		makeAjaxCall()
 		console.log('I made the ajax call')
 		
