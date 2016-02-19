@@ -23,7 +23,7 @@ $(document).ready(function () {
 
 	function makeAjaxCall () {
 		$.ajax({
-			url: 'http://api.nytimes.com/svc/events/v2/listings.json?&filters=category:(-Movies)&limit=500&date_range=2016-01-15:2016-12-31&api-key=700d159ff639b606164f25bf2aec2dd6:15:67386384',
+			url: 'http://api.nytimes.com/svc/events/v2/listings.json?&filters=category:(-Movies)&limit=805&date_range=2016-01-15:2016-12-31&api-key=700d159ff639b606164f25bf2aec2dd6:15:67386384',
 			type: 'GET',
 		})
 		.done(function (res) {
