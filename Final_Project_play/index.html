@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Weekend Edition</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oswald:700|Merriweather:700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body id="container">
+	<header id="page-header">
+		<h1>The Weekend Edition</h1>
+		<div class="copyright-logo"><a href="http://developer.nytimes.com"><img src="images/others/copyright-logo.png"></a></div>
+			
+	</header>
+	<div id="loading"><i class="fa fa-spinner fa-pulse"></i></div>
+	<div id="before">
+		<div class="clear"></div>
+		<div class="value-prop">
+			<p>Bring more random to your life</p>
+		</div>
+		<button class="adventure-button">
+			<p>Ready? Set? GO!</p>
+		</button>
+		<div class="adventure-gif">
+			<img src="images/gifs/carl-up.gif">
+		</div>
+	</div> <!-- before -->
+	
+
+				<div id="results_div">
+
+				<div><header class="event_header">This Week's Event: <span class="event_name"></span> <span class="event_detail_url"></span>
+				</header></div>
+
+				<div id="photo_description">
+					<div id="category-image"><span><img src="images/others/ifNoneDefault.png" id="image-background"></span></div>
+					<!-- here, but in the js, you will add a class that will correspond to certain images based on the category of the listing that is returned   <img src="../images/others/theater-test.png">-->
+
+					<section id="web_description"></section>
+					<div class="clear"></div>
+				</div><!-- The photo and the description -->
+
+				<div id="real-stats">
+					<section id="left-column">
+						<p><span class="entry">City: </span> <span id="city" class="api-entry"></span></p>
+						<p><span class="entry">Neighborhood: </span><span id="neighborhood" class="api-entry"></span></p>
+						<p><span class="entry">Venue: </span><span id="venue_name" class="api-entry"></span> <span id="venue_detail_url"></span></p>
+						<p><span class="entry">Price: </span><span id="price" class="api-entry"></span></p>
+					</section>
+					<section id="right-column">
+						<p><span class="entry">NYT Critic's Pick: </span><span id="times_pick" class="api-entry"></span></p>
+						<p><span class="entry">Critic: </span><span id="critic_name" class="api-entry"></span></p>
+						<p><span class="entry">Kid Friendly: </span><span id="kid_friendly" class="api-entry"></span></p>
+						<p><span class="entry">Event Time Details: </span><span id="date_time_description" class="api-entry"></span></p>
+					</section>
+				</div>
+				<div class="clear"></div>
+
+				<button class="adventure-button" id="retry-button">
+					<p>Find Another Adventure!</p>
+				</button>
+
+				</div> <!-- testing-div -->
+
+
+	<footer>
+		<p id="footer"></p>
+		<p id="image-credit"></p>
+		<p id="signature">Created by <a href="https://github.com/makinnawonu">Modupe Akinnawonu</a></p> 
+	</footer>
+	<div id="raw-json"></div>
+	<div id="num-results-test"></div>
+	<footer id="footer">
+		
+	</footer>
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/index.js"></script>
+</body>
+</html>
